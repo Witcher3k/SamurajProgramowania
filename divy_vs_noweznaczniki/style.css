@@ -1,0 +1,12 @@
+ 
+header,div#header{background-color: forestgreen;border: 5px solid black;padding:10px 10px 10px 10px}
+/*#- id . - klasa */ 
+h1{color: black;text-align: center;text-decoration: underline;width: auto;height: 50px}
+
+h3{color: black;text-align: center;text-decoration:overline underline;}
+
+nav,div#menu{background-color:cadetblue;border: 2px solid black;padding: 10px 10px 10px 10px}
+article,div.article{background-color: lightgrey;}
+
+footer,div#footer{padding-top: 5px; border-top: 5px solid yellow;color: white;background-color: darkgray;text-align: center}
+
