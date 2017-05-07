@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SuperStrona</title>
+    <link rel="stylesheet" href="css2.css" type="text/css"/>
+	
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet"> <!link do czcionki >
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Ubuntu+Condensed&amp;subset=latin-ext" rel="stylesheet">
+
+    <script type="text/javascript">
+	function odliczanie()
+	{
+    var dzisiaj= new Date();
+	var dzien = dzisiaj.getDate();
+	var miesiac = dzisiaj.getMonth()+1;
+	var rok = dzisiaj.getFullYear();
+	var godzina = dzisiaj.getHours();
+	var minuta = dzisiaj.getMinutes();
+	var sekunda = dzisiaj.getSeconds();
+	document.getElementById("zegar").innerHTML=dzien+"/"+miesiac+"/"+rok+" |"+godzina+":"+minuta+":"+sekunda;
+	setTimeout("odliczanie()",1000);
+	}
+	
+	function play1()
+	{
+       var audio = document.getElementById("audio");
+       audio.play();
+    }
+	function play2()
+	{
+	    var audio = document.getElementById("audio_cantina");
+	    audio.loop = true;
+	    audio.play();
+        
+	}
+
+    </script>
+	
+</head>
+<body onload="odliczanie();play2()">
+    <audio id="audio" src="mp3/miecz.mp3"></audio>
+    <audio id="audio_cantina" src="mp3/cantina.mp3"></audio>
+  <div id="container">
+   <div id="logo">Poznaj star wars</div>
+   
+   
+	
+    <div id="menu"  > 
+	
+        <div class="option"><a href="MainPage.html">Strona Głowna</a></div>
+        <div class="option"><a href="http://star-wars.pl/Tekst/3421" target="_blank">Kanon</a></div>
+        <div class="option"><a href="http://star-wars.pl/Tekst/91" target="_blank">Expanded Universe</a></div>
+        <div class="option"><a href="ZdjeciaPage.html">Zdjecia</a></div>
+        <div class="option"><a href="Page2.html">Filmy</a></div>
+        <div class="option"><a href="Page3.html">Cantina Band</a></div>
+	
+	<div style="clear:both;"></div>
+	
+	
+	</div>
+      <div id="topbar">
+	  <div id="topbarL">
+	  <img src="logo.png"/ height="80" width="100">
+	  </div>
+	  <div id="topbarR">O Star Wars słow kilka:</br>seria filmów science fiction z gatunku space opera George’a Lucasa
+       oraz innych produktów związanych ze światem stworzonym w filmie: seriali, wydawnictw literackich, komiksów, gier fabularnych, gier komputerowych itp.
+	   </div>
+	   <div style="clear:both;"></div>
+	   </div>
+      <div id="sidebar" onclick="play1()" ><div align="left" id="zegar" style="font-size:20px;color:white;text-align:center;"></div></div>
+      <div id="content"><div id="animacja"><img src="obrazki/gif.gif" width="400" height="400"/></div></div>
+      <div id="footer" style="text-align:center"> STAR WARS NIECH MOC BEDZIE Z WAMI! &copy; Wszelkie prawa zastrzeżone</div>
+  </div>
+
+</body>
+</html>

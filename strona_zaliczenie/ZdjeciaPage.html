@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SuperStrona</title>
+    <link rel="stylesheet" href="css2.css" type="text/css"/>
+	
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet"> <!link do czcionki >
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Ubuntu+Condensed&amp;subset=latin-ext" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+	function odliczanie()
+	{
+    var dzisiaj= new Date();
+	var dzien = dzisiaj.getDate();
+	var miesiac = dzisiaj.getMonth()+1;
+	var rok = dzisiaj.getFullYear();
+	var godzina = dzisiaj.getHours();
+	var minuta = dzisiaj.getMinutes();
+	var sekunda = dzisiaj.getSeconds();
+	document.getElementById("zegar").innerHTML=dzien+"/"+miesiac+"/"+rok+" |"+godzina+":"+minuta+":"+sekunda;
+	setTimeout("odliczanie()",1000);
+	}
+	
+	function play1()
+	{
+       var audio = document.getElementById("audio");
+       audio.play();
+
+    }
+	
+
+    var timer1=0;
+	var timer2=0;
+
+	function ustawslajd(nrslajdu)
+	{
+	    clearTimeout(timer1);
+	    clearTimeout(timer2);
+	    numer = nrslajdu-1;
+
+
+	    schowaj();
+	    setTimeout("zmienslajd()", 500);
+	}
+	var numer = Math.floor(Math.random() * 5) + 1;
+	function schowaj() {
+	    $("#slider").fadeOut(500);
+	}
+
+	function zmienslajd() {
+	    numer++; if (numer > 5) numer = 1;
+	    var plik = "<img src=\"obrazki/slajd" + numer + ".jpg\" width=\"700\" height=\"600\" align=\"bottom\" />"; /*Js musi rozróznić HTML /"-na poczatku atrybutu /"- na koncu */
+
+	    document.getElementById("slider").innerHTML = plik;
+	    $("#slider").fadeIn(500);
+
+	    timer1 = setTimeout("zmienslajd()", 5000);
+	    timer2 = setTimeout("schowaj()", 4500);
+	}
+
+    </script>
+	
+</head>
+<body onload="odliczanie();zmienslajd()">
+    <audio id="audio" src="mp3/miecz.mp3"></audio>
+  <div id="container">
+   <div id="logo">Poznaj star wars</div>
+   
+   
+	
+    <div id="menu"  > 
+
+        <div class="option"><a href="MainPage.html">Strona Głowna</a></div>
+        <div class="option"><a href="http://star-wars.pl/Tekst/3421" target="_blank">Kanon</a></div>
+        <div class="option"><a href="http://star-wars.pl/Tekst/91" target="_blank">Expanded Universe</a></div>
+        <div class="option"><a href="ZdjeciaPage.html">Zdjecia</a></div>
+        <div class="option"><a href="Page2.html">Filmy</a></div>
+        <div class="option"><a href="Page3.html">Cantina Band</a></div>
+
+	<div style="clear:both;"></div>
+	
+	
+	</div>
+      <div id="topbar">
+	  <div id="topbarL">
+	  <img src="logo.png"/ height="80" width="100">
+	  </div>
+	  <div id="topbarR">O Star Wars słow kilka:</br>seria filmów science fiction z gatunku space opera George’a Lucasa
+       oraz innych produktów związanych ze światem stworzonym w filmie: seriali, wydawnictw literackich, komiksów, gier fabularnych, gier komputerowych itp.
+	   </div>
+	   <div style="clear:both;"></div>
+         
+	   </div>
+      <div id="sidebar" onclick="play1()" ><div align="left" id="zegar" style="font-size:20px;color:white;text-align:center;"></div></div>
+      <div id="content"style="text-align:center" >
+    <div style="text-align:center;">
+    <span onclick="ustawslajd(1)" style="cursor:pointer;"> [1] </span>
+    <span onclick="ustawslajd(2)" style="cursor:pointer;"> [2] </span>
+    <span onclick="ustawslajd(3)" style="cursor:pointer;"> [3] </span>
+    <span onclick="ustawslajd(4)" style="cursor:pointer;"> [4] </span>
+    <span onclick="ustawslajd(5)" style="cursor:pointer;"> [5] </span>
+        </br></br>
+    <div id="slider" align="center"></div>
+    </div>
+      </div>
+      <div id="footer" style="text-align:center"> STAR WARS NIECH MOC BEDZIE Z WAMI! &copy; Wszelkie prawa zastrzeżone</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+﻿body
+{
+    background-color:darkgrey;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size:22px;
+}
+#container
+{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+#logo
+{
+ color:white;
+ margin:20px;
+ font-size:44px;
+ font-weight:bold;
+ letter-spacing:5px;
+ text-align:center;
+ font-family: 'Bungee',sans-serif; /* czcionka bez szeryfow */
+}
+#menu
+{
+ background-color:#303038;
+ margin-top:20px;
+ color:#ffffff;
+ padding:10px; /* The padding clears an area around the content (inside the border) of an element. */
+ text-align:center;
+  
+}
+
+
+#topbar
+{
+ background-color:black;
+ padding:10px;
+ margin-top:20px;
+ margin-bottom:25px;
+ height:90px;
+}
+#topbarL
+{
+ float:left;
+ width:138px;
+ text-align:center;
+ border-right: 2px solid yellow;
+}
+#topbarR
+{
+ float:left;
+ padding:10px;
+ width:750px;
+ font-size:16px;
+ text-align:justify;
+ color:white;
+}
+#sidebar
+{
+float:left;
+width:148px;
+min-height:780px;
+padding:20px
+text-align:center;
+border-right:2px solid yellow;
+background-image:url(obrazki/miecz.png)
+
+}
+#content
+{
+ float:left;
+ padding:40px;
+ width:730px;
+ background-color:lightgrey;
+}
+#footer
+{
+clear:both;
+}
+.option
+{
+ float:left;
+  
+ min-width:50px;
+ height:20px;
+ font-size:24px;
+ padding:10px;
+ border-right: 2px solid #444444;
+ opacity:0.8;
+
+ 
+ }
+ .option:hover
+ {
+	 background-color:black;
+	 cursor:pointer;
+ }
+ /*Nieodwiedzony link */
+a:link
+{
+ color:#ffffff;
+ text-decoration:none;
+}
+/*Odwiedzony link*/
+a:visited
+{
+ color:#ffffff;
+ text-decoration:none;
+}
+/*po najechaniu kursorem*/
+a:hover
+{
+ color:red;
+ text-decoration:none;
+}
+#body2
+{
+    background-color:#222222;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size:22px;
+}
+
+#animacja
+  { width: 100px;
+    height: 700px;
+    position: relative;
+    animation-name: animacja;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacja
+{
+    0% {
+       
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+       
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+       
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+       
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+      
+        left: 0px;
+        top: 0px;
+    }
+}
+
